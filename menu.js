@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: "Papa Murphy's Favorite Combo",
+    price: 18,
+    category: "entree",
+    popularity: 5,
+    rating: 4,
+    tags: ["pepporoni", "olives", "mushrooms", "sausage", "onions"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,6 +50,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -53,7 +61,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +71,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +82,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -88,8 +98,43 @@
 */
 
 //CODE HERE
-
-
+const foodArr = [{
+    name: "Triple cheese",
+    price: 15,
+    category: "entree",
+    popularity: 4,
+    rating: 3,
+    tags: ["cheese", "vegetarian", "kids"]
+}, {
+    name: "Hawaiian",
+    price: 18,
+    category: "entree",
+    popularity: 4,
+    rating: 3,
+    tags: ["pineapple", "ham", "cheese", "kids"]
+}, {
+    name: "Pepperoni",
+    price: 18,
+    category: "entree",
+    popularity: 5,
+    rating: 5,
+    tags: ["pepperoni", "cheese", "kids"]
+}, {
+    name: "Meat Lovers",
+    price: 22,
+    category: "entree",
+    popularity: 3,
+    rating: 3,
+    tags: ["pepperoni", "ham", "sausage"]
+}, {
+    name: "Buffalo Chicken",
+    price: 24,
+    category: "entree",
+    popularity: 4,
+    rating: 4,
+    tags: ["chicken", "blue cheese", "spicy"]
+}
+];
 
 //////////////////PROBLEM 4////////////////////
 /*
