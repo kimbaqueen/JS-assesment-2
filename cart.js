@@ -56,7 +56,13 @@ console.log(summedPrice);
 
 //CODE HERE
 
+const tax = 0.06;
+const couponValue = 0.2;
 
+const calcFinalPrice = function (cartTotal, couponValue, tax) {
+    return cartTotal = (summedPrice + (summedPrice * tax)) - (summedPrice * couponValue);
+};
+console.log(calcFinalPrice(summedPrice, couponValue, tax));
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -80,6 +86,13 @@ console.log(summedPrice);
 
 /*
     TEXT ANSWER HERE
+    Customer Object properties:
+    -name ('string' names can vary widely and strings offer flexibility): for lookups needed, categorizing, customization of greetings/communications
+    -username('string' flexibility for creation): so they can create a login & potentially earn rewards. repeat customer!
+    -password('string' flexibility): similar to username reasons, but also add security/safety/credibility
+    -email('string' flexibility): so that we may send out marketing/promotions 
+    -birthday('string' but with a space in between month/day in case we ever want to break it out for data): so that we may email out a birthday coupon and greeting
+    -zipcode(number, for accuracy and because these are set as static numbers): to get a gauge where your maket is coming from, helpful for other feature like delivery options.
 
 */
 
@@ -89,3 +102,13 @@ console.log(summedPrice);
 */
 
 //CODE HERE
+const customerObject = {
+    name: 'Kim Starr',
+    username: 'kstarr',
+    password: 'secret123',
+    email: 'kimstarr@email.com',
+    birthday: 'Dec 23',
+    zipcode: 84109
+};
+
+console.log(customerObject);

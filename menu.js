@@ -150,35 +150,30 @@ const foodArr = [{
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filter = 'kids';
+const filteredFood = foodArr.filter((item) => {
+    return (item.tags.indexOf(filter) >= 0);
+});
 
+console.log(filteredFood);
 
 
 //////////////////PROBLEM 5////////////////////
 /*
-    Now let's write a function that's a little
-    more flexible than just filtering for one
-    value. We want to be able to filter for
-    food that has above a certain rating,
-    below a certain price, or any other combo.
+    Now let's write a function that's a little more flexible than just filtering for one
+    value. We want to be able to filter for food that has above a certain rating, below a certain price, or any other combo.
 
     Write a function called `filterByProperty`
-    that takes in three arguments: `property`,
-    `number`, and `type.
+    that takes in three arguments: `property`,`number`, and `type.
 
-    The property will be a string (rating,
-    popularity, or price)
+    The property will be a string (rating, popularity, or price)
 
-    The number will be the number that you want
-    to compare against
+    The number will be the number that you want to compare against
 
-    The type should be 'above' or 'below' to
-    indicate whether you want to get foods with
-    values that are above or below the given number
-    for the given property
+    The type should be 'above' or 'below' to indicate whether you want to get foods with
+    values that are above or below the given number for the given property
 
-    Inside the function, create a variable to hold
-    a filtered array
+    Inside the function, create a variable to hold a filtered array
 
     Use the filter method to filter the foodArr
 
@@ -198,8 +193,21 @@ const foodArr = [{
 */
 
 //CODE HERE
+// const filterByProperty = ('property', number, 'type') => {
+//     let filteredArray = foodArr.filter((item) => {
+//         return
+//     });
+// };
 
-
+const filterByProperty = function (property, number, type) {
+    for (let i = 0; i < foodArr.length; i++) {
+        if (property > number) {
+            return type(console.log("is above"));
+        } else {
+            return obj()
+        }
+    }
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
