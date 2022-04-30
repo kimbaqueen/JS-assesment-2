@@ -22,8 +22,8 @@
 */
 
 //CODE HERE
-
-
+const greetUser = (userName) => `Welcome back, ${userName}`;
+console.log(greetUser('Andrew'));
 
 
 
@@ -50,20 +50,28 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+const canWeDeliver = (zipCode) => {
+    if (deliveryAreaZipCodes.includes(zipCode)) {
+        return "You're in our delivery zone!";
+    } else {
+        return "Sorry, we can't deliver to that address";
+    }
+};
 
-
+// console.log(canWeDeliver(84606));
+console.log(canWeDeliver(85205));
 
 /* 
     Problem 2 Continued
-
+ 
     Now you're going to rewrite your function.
-
+ 
     If you wrote `canWeDeliver` using a loop of
     some kind, write a new function (`canWeDeliverTwo`)
     below, using the `includes` array method. 
     Look it up on MDN if you're not sure how to use 
     it. 
-
+ 
     If you already used the `includes` method, 
     write a new function using some sort of 
     loop (for loop, higher order array method).
@@ -71,28 +79,39 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = (zipCode) => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (i === zipCode) {
+            return "You're in our delivery zone!";
+        } else {
+            return "Sorry, we can't deliver to that address";
+        }
+    }
+}
 
+console.log(canWeDeliverTwo(84606));
+// console.log(canWeDeliverTwo(85205));
 
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
     information about a couple of deals that are
     available at the restaurant currently. 
-
+ 
     You are going to access the object's properties 
     and change some values. Don't edit the array 
     directly, let's use the `replace` method.
-
+ 
     Read on for more instructions.
 */
 
 const deals = [
     {
-        title: '15% Off!', 
+        title: '15% Off!',
         desc: 'Applied to your entire order when you spend $30 or more'
-    }, 
+    },
     {
-        title: 'Free Kids Meal with 2 Regular Entrees', 
+        title: 'Free Kids Meal with 2 Regular Entrees',
         desc: '   This deal lasts until the end of March! '
     }
 ]
@@ -107,12 +126,13 @@ const deals = [
 */
 
 //CODE HERE
-
+deals[0]['title'] = '10% Off!';
+console.log(deals);
 
 
 /*
     The restaurant is going to continue its
-    family deal for another month. 
+    family deal for another month.
 
     Reassign the value of the second deal's desc
     to be itself, but use the `replace` method
@@ -124,3 +144,6 @@ const deals = [
 */
 
 //CODE HERE
+const updatedDeals = (deals([1]['desc']).trim('   This deal lasts until the end of April! '));
+console.log(updatedDeals);
+
