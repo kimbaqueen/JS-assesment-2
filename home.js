@@ -144,6 +144,8 @@ console.log(deals);
 */
 
 //CODE HERE
-const updatedDeals = (deals([1]['desc']).trim('   This deal lasts until the end of April! '));
-console.log(updatedDeals);
+const updatedDeals = (deals[1]['desc']) = ('   This deal lasts until the end of April! ');
+console.log(updatedDeals.trim());
+
+
 
